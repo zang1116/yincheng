@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://yincheng-planner.pages.dev/sitemap.xml

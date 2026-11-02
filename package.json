@@ -1,0 +1,22 @@
+{
+  "name": "yincheng",
+  "private": true,
+  "version": "2.3.5",
+  "description": "引程 2.3.5：本地学习计划 · 可靠写入校验 · 统一日程搜索",
+  "scripts": {
+    "test:flow": "node scripts/test-flow.js",
+    "test:study": "node scripts/test-study-plan.js",
+    "test:search": "node scripts/test-calendar-search.js",
+    "cap:sync": "cap sync android",
+    "android:sync": "cap sync android",
+    "android:build": "cap sync android && cd android && gradlew.bat assembleRelease"
+  },
+  "dependencies": {
+    "@capacitor/android": "6.2.0",
+    "@capacitor/core": "6.2.0",
+    "@capacitor/local-notifications": "^6.1.3"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "6.2.0"
+  }
+}

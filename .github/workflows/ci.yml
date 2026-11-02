@@ -1,0 +1,33 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run test:flow
+      - run: npm run test:study
+      - run: npm run test:search
+      - run: node scripts/test-timetable.js
+      - name: Syntax check
+        run: |
+          find www/js -name '*.js' -print0 | xargs -0 -n1 node --check
+          find official-site -name '*.js' -not -path '*/node_modules/*' -not -path '*/public/*' -print0 | xargs -0 -n1 node --check
+      - name: Build official site
+        working-directory: official-site
+        run: |
+          npm ci
+          npm run build

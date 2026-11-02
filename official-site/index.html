@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#edf4ef" />
+  <meta name="color-scheme" content="light" />
+  <meta name="description" content="引程是一款为大学生设计的离线学习规划工作台：自然语言排日程、按周次管理课表、每天督查长线目标。安卓安装包直接下载。" />
+  <meta property="og:title" content="引程 · 把这一学期排成看得见的路" />
+  <meta property="og:description" content="对话排日程、课表按周次、目标每天督查。安卓安装包约 5 MB，可覆盖旧版。" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://yincheng-planner.pages.dev/" />
+  <meta property="og:image" content="https://yincheng-planner.pages.dev/assets/shots/01-chat.png" />
+  <link rel="canonical" href="https://yincheng-planner.pages.dev/" />
+  <title>引程 · 大学生学练规划工作台</title>
+  <link rel="icon" href="assets/icon.png" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="main.js" defer></script>
+</head>
+<body class="page-home">
+  <a class="skip-link" href="#main">跳到主要内容</a>
+
+  <header class="site-header">
+    <a class="site-brand" href="/" aria-label="引程首页">
+      <img src="assets/icon.png" width="36" height="36" alt="" />
+      <span>引程</span>
+    </a>
+    <nav class="site-nav" aria-label="主导航">
+      <a class="is-current" href="/" aria-current="page">首页</a>
+      <a href="/features">功能介绍</a>
+      <a href="/screens">真实界面</a>
+      <a href="/guide">安装指南</a>
+    </nav>
+    <div class="header-actions">
+      <span class="header-count"><b data-download-count>—</b> 次下载</span>
+      <a class="header-download" href="/api/download" data-download>下载安卓版</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="hero-grid" aria-hidden="true"></div>
+      <div class="hero-copy">
+        <div class="release-strip">
+          <span>Android 2.3.5</span>
+          <span>离线可用</span>
+          <span>无需注册</span>
+        </div>
+        <h1>把这一学期，<br /><span>排成看得见的路。</span></h1>
+        <p class="hero-lede">课表、作业、临时安排和长线目标，都在一个工作台里。直接说“明晚八点练一小时 Agent”，引程会把它放进真正能执行的日程。</p>
+        <div class="hero-actions">
+          <a class="download-button" href="/api/download" data-download>
+            <span class="android-mark" aria-hidden="true"></span>
+            <span>下载安卓安装包<small>2.3.5 · 约 5 MB · 可覆盖旧版</small></span>
+          </a>
+          <a class="quiet-link" href="/features">先看看它能做什么</a>
+        </div>
+        <dl class="proof-strip">
+          <div>
+            <dt>官网累计下载</dt>
+            <dd><b data-download-count>—</b> 次</dd>
+          </div>
+          <div>
+            <dt>当前版本</dt>
+            <dd>2.3.5</dd>
+          </div>
+          <div>
+            <dt>数据位置</dt>
+            <dd>默认本机</dd>
+          </div>
+        </dl>
+      </div>
+
+      <div class="hero-stage">
+        <div class="stage-notes">
+          <div class="stage-note note-course">
+            <span>周一 08:30</span>
+            <strong>高等数学</strong>
+            <small>第 1–2 节 · 教 8-517</small>
+          </div>
+          <div class="stage-note note-task">
+            <span class="task-dot" aria-hidden="true"></span>
+            <div><strong>Agent 练习</strong><small>今晚 20:00 · 已设提醒</small></div>
+          </div>
+        </div>
+        <div class="phone-wrap">
+          <div class="phone">
+            <div class="phone-speaker" aria-hidden="true"></div>
+            <div class="phone-screen">
+              <img id="phoneShot" src="assets/shots/01-chat.png" alt="引程对话界面：今日安排与目标督查" width="780" height="1688" />
+            </div>
+          </div>
+          <div class="screen-switcher" role="group" aria-label="切换产品界面">
+            <button type="button" class="is-active" data-shot="chat" aria-pressed="true">对话</button>
+            <button type="button" data-shot="calendar" aria-pressed="false">日程</button>
+            <button type="button" data-shot="timetable" aria-pressed="false">课表</button>
+            <button type="button" data-shot="goals" aria-pressed="false">目标</button>
+          </div>
+          <p class="shot-caption" id="shotCaption" aria-live="polite">说一句安排，日程就位。长按消息还能撤回或删除。</p>
+          <a class="view-all-screens" href="/screens">查看完整手机界面</a>
+        </div>
+        <span class="stage-index" aria-hidden="true">W07</span>
+      </div>
+    </section>
+
+    <section class="home-directory">
+      <div class="section-heading">
+        <h2>按你关心的部分查看。</h2>
+        <p>首页只介绍产品方向。功能细节、完整手机截图和安装说明分别放到了独立页面。</p>
+      </div>
+      <div class="directory-grid">
+        <a class="directory-card directory-features" href="/features">
+          <span>功能介绍</span>
+          <h3>对话排程、周课表与目标督查</h3>
+          <p>看引程怎样把一句自然语言安排变成真正落进日历的日程。</p>
+          <strong>查看完整功能</strong>
+        </a>
+        <a class="directory-card directory-screens" href="/screens">
+          <span>真实界面</span>
+          <h3>四张完整手机截图</h3>
+          <p>对话、日程、课表和目标页面完整展示，不裁切、不变形。</p>
+          <strong>打开截图画廊</strong>
+        </a>
+        <a class="directory-card directory-guide" href="/guide">
+          <span>安装指南</span>
+          <h3>下载、安装与常见问题</h3>
+          <p>了解 Android 安装权限、通知设置、本机数据和模型密钥。</p>
+          <strong>查看安装说明</strong>
+        </a>
+      </div>
+    </section>
+
+    <section class="home-principle">
+      <p>课表是每周重复的，日程是每天变化的，目标是长期积累的。</p>
+      <h2>引程把它们放在同一张时间表里，<br />但不会混成同一类任务。</h2>
+    </section>
+
+    <section class="final-cta">
+      <div>
+        <span>Android · version 2.3.5</span>
+        <h2>下一次打开手机，<br />先看见今天要走的路。</h2>
+      </div>
+      <a class="download-button light" href="/api/download" data-download>
+        <span class="android-mark" aria-hidden="true"></span>
+        <span>下载引程安装包<small>约 5 MB · 可覆盖旧版</small></span>
+      </a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-brand"><img src="assets/icon.png" width="40" height="40" alt="" /><strong>引程</strong></div>
+    <p>大学生学练规划工作台。把想法变成今天能完成的事。</p>
+    <span>作者邮箱 <a href="mailto:1203046333@qq.com">1203046333@qq.com</a> · © <span id="year"></span> 一种草本植物</span>
+  </footer>
+
+  <div class="mobile-download-bar">
+    <div><strong>引程 2.3.5</strong><span><b data-download-count>—</b> 次下载</span></div>
+    <a class="header-download" href="/api/download" data-download>下载 APK</a>
+  </div>
+</body>
+</html>

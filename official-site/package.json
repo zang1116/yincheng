@@ -1,0 +1,12 @@
+{
+  "name": "yincheng-official-site",
+  "private": true,
+  "version": "2.3.5",
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs"
+  },
+  "dependencies": {
+    "@netlify/blobs": "^8.2.0"
+  }
+}

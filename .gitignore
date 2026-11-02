@@ -1,0 +1,45 @@
+# Dependencies and generated output
+node_modules/
+dist/
+test-artifacts/
+.netlify/
+.wrangler/
+official-site/node_modules/
+official-site/public/
+official-site/.netlify/
+official-site/.wrangler/
+
+# Android build output and local configuration
+android/.gradle/
+android/build/
+android/app/build/
+android/local.properties
+android/keystore.properties
+android/app/src/main/assets/public/
+android/app/src/main/assets/capacitor.config.json
+android/app/src/main/assets/capacitor.plugins.json
+android/capacitor-cordova-android-plugins/
+.gradle/
+*.iml
+.idea/
+
+# Signing keys and credentials
+*.jks
+*.keystore
+keystore.properties
+.env
+.env.*
+!.env.example
+
+# Release archives and old packaged builds
+*.zip
+*.apk
+!official-site/download/yincheng-2.3.5.apk
+release/
+引程-2.0-完整包/
+site/
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+*.log

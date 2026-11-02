@@ -1,0 +1,60 @@
+[build]
+  publish = "public"
+  functions = "netlify/functions"
+
+[functions]
+  node_bundler = "esbuild"
+
+[[redirects]]
+  from = "/api/download"
+  to = "/.netlify/functions/download"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/api/download-count"
+  to = "/.netlify/functions/download-count"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/install"
+  to = "/.netlify/functions/download"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/latest.apk"
+  to = "/.netlify/functions/download"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/*"
+  to = "/404.html"
+  status = 404
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "DENY"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+    Content-Security-Policy = "default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'"
+
+[[headers]]
+  for = "/api/*"
+  [headers.values]
+    Cache-Control = "no-store"
+
+[[headers]]
+  for = "/download/*.apk"
+  [headers.values]
+    Content-Disposition = "attachment; filename=\"yincheng-2.3.5.apk\""
+    Content-Type = "application/vnd.android.package-archive"
+
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800, stale-while-revalidate=86400"

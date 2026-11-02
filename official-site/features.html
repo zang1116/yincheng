@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#edf4ef" />
+  <meta name="description" content="引程功能：自然语言排日程、按周次管理课表、每日目标督查，以及真实写入校验。" />
+  <link rel="canonical" href="https://yincheng-planner.pages.dev/features" />
+  <title>功能介绍 · 引程</title>
+  <link rel="icon" href="assets/icon.png" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="main.js" defer></script>
+</head>
+<body class="page-features">
+  <a class="skip-link" href="#main">跳到主要内容</a>
+  <header class="site-header">
+    <a class="site-brand" href="/" aria-label="引程首页"><img src="assets/icon.png" width="36" height="36" alt="" /><span>引程</span></a>
+    <nav class="site-nav" aria-label="主导航">
+      <a href="/">首页</a>
+      <a class="is-current" href="/features" aria-current="page">功能介绍</a>
+      <a href="/screens">真实界面</a>
+      <a href="/guide">安装指南</a>
+    </nav>
+    <div class="header-actions">
+      <span class="header-count"><b data-download-count>—</b> 次下载</span>
+      <a class="header-download" href="/api/download" data-download>下载安卓版</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="subpage-hero">
+      <p class="breadcrumb"><a href="/">首页</a> / 功能介绍</p>
+      <h1>不是又一个<br />待办清单。</h1>
+      <p>引程把课表、日程和目标分开管理，又让它们出现在同一天里。它知道你第几周、哪节课，也会检查一句“已写入”是否真的落进了数据。</p>
+    </section>
+
+    <section class="day-section feature-page-day">
+      <div class="section-heading">
+        <h2>一天不是一堆待办，<br />而是一条能走完的线。</h2>
+        <p>上课、交作业、临时聚会和个人练习放进同一条时间线。完成的勾掉，没完成的顺延，下一步不需要重新想。</p>
+      </div>
+      <div class="day-board">
+        <div class="day-date"><span>11月2日</span><strong>周一</strong><small>第 7 周</small></div>
+        <ol class="day-line">
+          <li class="course-item"><time>08:30</time><div><strong>高等数学</strong><span>第 1–2 节 · 教 8-517</span></div><em>有课</em></li>
+          <li class="task-item"><time>09:30</time><div><strong>第三章习题</strong><span>图书馆 3F · 重点看极限与连续</span></div><em>待完成</em></li>
+          <li class="task-item done-item"><time>14:00</time><div><strong>英语听力 30 分钟</strong><span>个人 · 已记录完成</span></div><em>完成</em></li>
+          <li class="focus-item"><time>20:00</time><div><strong>Agent 开发练习</strong><span>工具调用闭环 · 提醒已设</span></div><em>专注</em></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="features">
+      <div class="section-heading compact">
+        <h2>每一项都围绕“真的做到”。</h2>
+        <p>不仅有生成结果的回复，还会核对实际写入；重复或无效动作会明确告诉你，而不是伪造完成。</p>
+      </div>
+      <article class="feature feature-command">
+        <div class="feature-copy">
+          <span class="feature-number">01</span>
+          <h3>说人话，就能改日程</h3>
+          <p>自然语言直接增删改查。长期计划会按天展开，并自动避免重复任务。模型只回文字、没有动作时，客户端会重新核对并执行。</p>
+          <ul>
+            <li>“把今天没做完的顺延到明天”</li>
+            <li>“高数改成单周，教室换到教 8-517”</li>
+            <li>“从下周开始，一三五晚八点练 Agent”</li>
+          </ul>
+        </div>
+        <div class="command-demo" aria-label="自然语言排日程示例">
+          <div class="demo-user">帮我把 Agent 练习记到今晚八点，顺便提醒我带电脑。</div>
+          <div class="demo-assistant"><span class="demo-check">✓</span><div><strong>已排进今晚 20:00–21:00</strong><small>提前 10 分钟提醒 · 备注：带电脑</small></div></div>
+        </div>
+      </article>
+      <article class="feature feature-timetable">
+        <div class="mini-timetable" aria-label="按周次显示的课表示例">
+          <div class="mini-head"><span>第 7 周</span><strong>11/02–11/08</strong></div>
+          <div class="mini-grid">
+            <span class="mini-period">1<br /><small>08:30</small></span>
+            <span class="mini-course blue">高等数学</span><span></span><span></span><span></span><span></span>
+            <span class="mini-period">3<br /><small>10:20</small></span>
+            <span></span><span></span><span class="mini-course green">机器学习</span><span></span><span></span>
+            <span class="mini-period">5<br /><small>14:00</small></span>
+            <span class="mini-course orange">大学英语</span><span></span><span></span><span></span><span></span>
+            <span class="mini-period">7<br /><small>16:10</small></span>
+            <span></span><span></span><span></span><span></span><span class="mini-course lilac">Agent 实践</span>
+          </div>
+        </div>
+        <div class="feature-copy">
+          <span class="feature-number">02</span>
+          <h3>课表按周次，不再每周重抄</h3>
+          <p>单双周、断周、教务节次和自由时间都能保存。照片或 PDF 导入后先核对再写入，手机上也可以直接补课、改教室、批量调整。</p>
+          <div class="feature-facts"><span>1–15 单周</span><span>2–16 双周</span><span>周视图</span></div>
+        </div>
+      </article>
+      <article class="feature feature-goals">
+        <div class="feature-copy">
+          <span class="feature-number">03</span>
+          <h3>目标会被检查，不是立完就忘</h3>
+          <p>每天对照与目标相关的日程，算完成、未做和逾期。没有模型密钥也能使用本地督查。</p>
+          <div class="goal-bar"><span>完成 3</span><span>未做 2</span><span>逾期 1</span><strong>完成率 50%</strong></div>
+        </div>
+        <blockquote class="audit-card"><span>今日督查</span><p>“本周完成 Agent 项目”不是口号。卡住的两项还躺在日程里，先做最具体的那一项。</p><small>根据相关日程生成 · 可切换本地 / 大模型督查</small></blockquote>
+      </article>
+    </section>
+
+    <section class="workflow">
+      <div class="section-heading"><h2>从一团计划，<br />到今天的下一步。</h2><p>你只需要带进课程和想法，剩下的整理交给引程。</p></div>
+      <ol class="workflow-steps">
+        <li><span>导入</span><strong>放进真实课表</strong><p>拍照、PDF 或手动录入，保留星期、节次和周次。</p></li>
+        <li><span>开口</span><strong>说清这一周要做什么</strong><p>长期计划自动拆成每日任务，临时变化直接改。</p></li>
+        <li><span>执行</span><strong>看时间线，勾掉下一步</strong><p>提醒、顺延、完成记录和目标检查都在原地完成。</p></li>
+      </ol>
+    </section>
+
+    <section class="next-page-link"><span>想看看实际页面？</span><a href="/screens">打开完整手机界面</a></section>
+    <section class="final-cta"><div><span>Android · version 2.3.5</span><h2>把下一步放进今天。</h2></div><a class="download-button light" href="/api/download" data-download><span class="android-mark" aria-hidden="true"></span><span>下载引程安装包<small>约 5 MB · 可覆盖旧版</small></span></a></section>
+  </main>
+  <footer class="site-footer"><div class="footer-brand"><img src="assets/icon.png" width="40" height="40" alt="" /><strong>引程</strong></div><p>大学生学练规划工作台。把想法变成今天能完成的事。</p><span>作者邮箱 <a href="mailto:1203046333@qq.com">1203046333@qq.com</a> · © <span id="year"></span> 一种草本植物</span></footer>
+  <div class="mobile-download-bar"><div><strong>引程 2.3.5</strong><span><b data-download-count>—</b> 次下载</span></div><a class="header-download" href="/api/download" data-download>下载 APK</a></div>
+</body>
+</html>

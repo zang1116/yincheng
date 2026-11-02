@@ -1,0 +1,19 @@
+{
+  "appId": "app.yincheng.planner",
+  "appName": "引程",
+  "webDir": "www",
+  "server": {
+    "androidScheme": "https",
+    "cleartext": true
+  },
+  "plugins": {
+    "CapacitorHttp": {
+      "enabled": true
+    },
+    "LocalNotifications": {
+      "smallIcon": "ic_stat_yc",
+      "iconColor": "#0f6a4e",
+      "sound": "default"
+    }
+  }
+}
