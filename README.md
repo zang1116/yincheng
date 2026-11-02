@@ -1,8 +1,14 @@
 # 引程
 
+[![CI](https://github.com/zang1116/yincheng/actions/workflows/ci.yml/badge.svg)](https://github.com/zang1116/yincheng/actions/workflows/ci.yml)
+[![Release](https://img.shields.io/github/v/release/zang1116/yincheng)](https://github.com/zang1116/yincheng/releases)
+[![License: MIT](https://img.shields.io/badge/license-MIT-147055.svg)](LICENSE)
+
 引程是一款面向大学生与备考用户的本地优先学习规划工作台。它把课程表、日程、长周期学习计划和目标督查放在同一个时间体系中，并通过确定性校验避免 AI 模型“只说已写入、实际没有写入”的问题。
 
 官网：[https://yincheng-planner.pages.dev/](https://yincheng-planner.pages.dev/)
+
+[下载最新版 Android APK](https://github.com/zang1116/yincheng/releases/latest)
 
 ![引程对话界面](official-site/assets/shots/01-chat.png)
 
